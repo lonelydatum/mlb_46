@@ -197,9 +197,9 @@ var _commonJsCommonJs = require('../../_common/js/common.js');
 function start() {
 	var tl = (0, _commonJsCommonJs.bbSecond)();
 
-	tl.to(".chev_1a", { duration: .3, opacity: 0 }, "+=.1");
+	// tl.to(".chev_1a", {duration:.3, opacity:0}, "+=.1")
 	tl.from(".proline-end", { duration: .3, opacity: 0 }, "+=.1");
-	tl.to(".chev_1b", { duration: .3, opacity: 0 }, "+=.3");
+	// tl.to(".chev_1b", {duration:.3, opacity:0}, "+=.3")
 
 	tl.add((0, _commonJsCommonJs.bb2)());
 }
