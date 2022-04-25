@@ -159,7 +159,13 @@ canvas, .text, .frame, .outline, img {
 img {
   vertical-align: top;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .outline {
