@@ -1,11 +1,6 @@
-import {HOR, size, olg} from '../../_common/js/common.js'
+import {HOR, size, olg, READ} from '../../_common/js/common.js'
 
 
-
-const READ = {
-	t1: 2.2,
-	t2: 2.7
-}
 
 
 function start(){

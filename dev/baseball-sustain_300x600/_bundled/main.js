@@ -12,8 +12,8 @@ gsap.defaults({
 });
 
 var READ = {
-	t1: 2.2,
-	t2: 2.7
+	t1: 1.2,
+	t2: 1.6
 };
 
 var SECOND = {

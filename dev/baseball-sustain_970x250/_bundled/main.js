@@ -12,8 +12,8 @@ gsap.defaults({
 });
 
 var READ = {
-	t1: 2.2,
-	t2: 2.7
+	t1: 1.2,
+	t2: 1.6
 };
 
 var SECOND = {
@@ -224,11 +224,6 @@ exports.swiiing = swiiing;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-var READ = {
-	t1: 2.2,
-	t2: 2.7
-};
-
 function start() {
 
 	var tl = new TimelineMax({ onComplete: function onComplete() {
@@ -256,7 +251,7 @@ function start() {
 	tl.from(".t1a", { duration: .3, opacity: 0, y: "-=" + HEIGHT }, "t1-in");
 	tl.from(".t1b", { duration: .3, opacity: 0, y: "+=" + HEIGHT }, "t1-in");
 
-	tl.add("t1-out", "+=" + READ.t1);
+	tl.add("t1-out", "+=" + _commonJsCommonJs.READ.t1);
 	tl.to(".t1a", { duration: .3, opacity: 0, y: "-=" + HEIGHT }, "t1-out");
 	tl.to(".t1b", { duration: .3, opacity: 0, y: "+=" + HEIGHT }, "t1-out");
 
