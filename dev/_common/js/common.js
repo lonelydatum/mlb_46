@@ -224,4 +224,27 @@ function HOR(){
 
 }
 
-export {size, init, olg, chev, bb, bb2, READ, bbSecond, SECOND, HOR}
+function swiiing(){
+	const tl = bb_a()
+
+	
+
+
+	// tl.add("t2-in")
+	// tl.from(".t1c", {x:`-${size.w}`, duration:.2}, "t2-in")
+	// tl.from(".t1d", {x:size.w, duration:.2}, "t2-in")
+
+	// tl.add("t2-out", `+=${SECOND.t2}`)
+	// tl.to(".t1c", {x:`-${size.w}`, duration:.3}, "t2-out")
+	// tl.to(".t1d", {x:size.w, duration:.3}, "t2-out")
+
+
+
+	tl.to([".o-shadow", ".proline", ".o"], {duration:.1, opacity:0}, "f1-out")
+
+	tl.from(".bring",  {duration:.25, x:"-=100", opacity:0})
+	tl.add(chev())
+	return tl
+}
+
+export {size, init, olg, chev, bb, bb2, READ, bbSecond, SECOND, HOR, swiiing}
