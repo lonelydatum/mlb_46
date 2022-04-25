@@ -53,14 +53,18 @@ function bb_a() {
 	tl.from(".proline", { scale: 1, duration: .25, opacity: 0, ease: 'back.out' }, "proline");
 
 	tl.to(".proline", { duration: .2, opacity: 0 }, "+=1");
-
+	console.log(document.querySelector(".t1"));
 	tl.add("t1-in");
 	tl.from(".t1a", { x: "-" + size.w, duration: .2 }, "t1-in");
-	tl.from(".t1b", { x: size.w, duration: .2 }, "t1-in");
+	if (document.querySelector(".t1b")) {
+		tl.from(".t1b", { x: size.w, duration: .2 }, "t1-in");
+	}
 
 	tl.add("t1-out", "+=" + SECOND.t1);
 	tl.to(".t1a", { x: "-" + size.w, duration: .3 }, "t1-out");
-	tl.to(".t1b", { x: size.w, duration: .3 }, "t1-out");
+	if (document.querySelector(".t1b")) {
+		tl.to(".t1b", { x: size.w, duration: .3 }, "t1-out");
+	}
 
 	return tl;
 }
@@ -70,11 +74,15 @@ function bbSecond() {
 
 	tl.add("t2-in");
 	tl.from(".t1c", { x: "-" + size.w, duration: .2 }, "t2-in");
-	tl.from(".t1d", { x: size.w, duration: .2 }, "t2-in");
+	if (document.querySelector(".t1d")) {
+		tl.from(".t1d", { x: size.w, duration: .2 }, "t2-in");
+	}
 
 	tl.add("t2-out", "+=" + SECOND.t2);
 	tl.to(".t1c", { x: "-" + size.w, duration: .3 }, "t2-out");
-	tl.to(".t1d", { x: size.w, duration: .3 }, "t2-out");
+	if (document.querySelector(".t1d")) {
+		tl.to(".t1d", { x: size.w, duration: .3 }, "t2-out");
+	}
 
 	tl.to([".o-shadow", ".proline", ".o"], { duration: .1, opacity: 0 }, "f1-out");
 
@@ -112,7 +120,10 @@ function chev() {
 	var tl = new TimelineMax();
 
 	tl.add("chev", "+=.1");
-	tl.to(".zero", { duration: .3, opacity: 0 }, "chev");
+	if (document.querySelector(".zero")) {
+		tl.to(".zero", { duration: .3, opacity: 0 }, "chev");
+	}
+
 	tl.from(".chev_1", { duration: .3, opacity: 0 }, "chev");
 	tl.from(".chev_2", { duration: .3, opacity: 0 }, "-=.2");
 	tl.from(".chev_3", { duration: .3, opacity: 0 }, "-=.2");
